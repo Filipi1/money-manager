@@ -1,15 +1,14 @@
 <nb-layout>
-
   <nb-layout-header fixed>
-  <!-- Insert header here -->
+    <nb-icon icon="menu" (click)="toggle()"></nb-icon>
   </nb-layout-header>
 
-  <nb-layout-column>
+  <nb-sidebar>
+    <div class="menu-opt" (click)="navigateTo('')"><nb-icon icon="grid-outline"></nb-icon> Dashboard</div>
+    <div class="menu-opt" (click)="navigateTo('home')"><nb-icon icon="home"></nb-icon> Home</div>
+  </nb-sidebar>
+
+  <nb-layout-column class="colored-column-basic">
     <router-outlet></router-outlet>
   </nb-layout-column>
-
-  <nb-layout-footer fixed>
-  <!-- Insert footer here -->
-  </nb-layout-footer>
-
 </nb-layout>
